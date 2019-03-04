@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+ DocumentRoot /usr/share/davical/htdocs
+ DirectoryIndex index.php index.html
+ ServerName mydavicalsite.dyndns.org
+ ServerAlias calendar.mydavicalsite.dyndns.org
+ Alias /images/ /usr/share/davical/htdocs/images/
+ <Directory /usr/share/davical/htdocs/>
+     AllowOverride None
+     Order allow,deny
+     Allow from all
+ </Directory>
+ php_value include_path /usr/share/awl/inc
+ php_value magic_quotes_gpc 0
+ php_value register_globals 0
+ php_value error_reporting "E_ALL & ~E_NOTICE"
+ php_value default_charset "utf-8"
+</VirtualHost>

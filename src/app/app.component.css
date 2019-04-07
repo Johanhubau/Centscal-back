@@ -27,5 +27,12 @@ mat-toolbar {
   left: 0;
   right: 0;
 }
+mat-card{
+  width: 60%;
+  margin: auto;
 
+}
+.fc-button{
+
+}
 

@@ -1,10 +1,6 @@
-<mat-checkbox>
-  Asso 1
-</mat-checkbox><br>
-<mat-checkbox>
-  Asso 2
-</mat-checkbox><br>
-<mat-checkbox>
-  Asso 3
-</mat-checkbox>
-
+<h1>Sélectionner</h1>
+<mat-selection-list>
+  <mat-list-option *ngFor="let calendar of CalendarList">
+    {{calendar}}
+  </mat-list-option>
+</mat-selection-list>

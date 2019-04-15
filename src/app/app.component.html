@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <img class='logo' src='../assets/logo.png' alt="Centscal">
+    <input type="image" class="logo" src='../assets/logo.png' routerLink="/calendar" alt="Centscal">
     <span class="spacer"></span>
     <p>{{username}}</p>
     <button mat-button><a routerLink="/filtres">Filtres</a></button>
@@ -17,13 +17,7 @@
       </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
-<mat-card>
-  <full-calendar defaultView="dayGridMonth"
-                 [plugins]="calendarPlugins"
-                 [firstDay]="1"
-                 [navLinks]="true">
-  </full-calendar>
-</mat-card>
+
 
 
 

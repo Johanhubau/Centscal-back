@@ -7,18 +7,18 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   imports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
-    MatDialogModule ],
+    MatDialogModule, MatListModule ],
   exports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
-    MatDialogModule ],
+    MatDialogModule, MatListModule ],
 })
 export class MaterialModule { }

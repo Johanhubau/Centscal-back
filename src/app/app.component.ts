@@ -9,4 +9,5 @@ import frLocale from '@fullcalendar/core/locales/fr';
 })
 export class AppComponent {
   calendarPlugins = [dayGridPlugin];
+  username = 'username';
 }

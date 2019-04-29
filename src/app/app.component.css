@@ -28,7 +28,8 @@ mat-toolbar {
   right: 0;
 }
 
-.fc-button{
-
+.filter-button{
+  color: white;
+  text-decoration: none;
 }
 

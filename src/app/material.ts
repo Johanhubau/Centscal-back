@@ -8,17 +8,20 @@ import { MatCardModule } from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   imports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
-    MatDialogModule, MatListModule ],
+    MatDialogModule, MatListModule,
+    MatButtonToggleModule],
   exports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
-    MatDialogModule, MatListModule ],
+    MatDialogModule, MatListModule,
+    MatButtonToggleModule],
 })
 export class MaterialModule { }

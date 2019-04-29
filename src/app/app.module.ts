@@ -7,13 +7,16 @@ import { MaterialModule } from './material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { FiltersComponent } from './filters/filters.component';
-import { CalendarComponent } from './calendar/calendar.component';
+
+import { CalendarUserviewComponent } from './calendar-userview/calendar-userview.component';
+import { CalendarAssoviewComponent } from './calendar-assoview/calendar-assoview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiltersComponent,
-    CalendarComponent
+    CalendarUserviewComponent,
+    CalendarAssoviewComponent
   ],
   imports: [
     BrowserModule,

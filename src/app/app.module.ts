@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { FiltersComponent } from './filters/filters.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { EventEditorComponent } from './event-editor/event-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiltersComponent,
-    CalendarComponent
+    CalendarComponent,
+    EventEditorComponent
   ],
   imports: [
     BrowserModule,

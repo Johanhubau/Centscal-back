@@ -8,17 +8,24 @@ import { MatCardModule } from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule, MatInputModule } from '@angular/material';
+
 
 @NgModule({
   imports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
-    MatDialogModule, MatListModule ],
+    MatDialogModule, MatListModule,
+    MatFormFieldModule, MatNativeDateModule,
+    MatInputModule],
   exports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
-    MatDialogModule, MatListModule ],
+    MatDialogModule, MatListModule,
+    MatFormFieldModule, MatNativeDateModule,
+    MatInputModule],
 })
 export class MaterialModule { }

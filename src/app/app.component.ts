@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import frLocale from '@fullcalendar/core/locales/fr';
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,6 @@ import frLocale from '@fullcalendar/core/locales/fr';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  calendarPlugins = [dayGridPlugin];
   username = 'username';
+  asso = true;
 }

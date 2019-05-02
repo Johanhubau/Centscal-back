@@ -3,6 +3,7 @@
     <input type="image" class="logo" src='../assets/logo.png' alt="Centscal">
     <button mat-icon-button routerLink="/calendar"><mat-icon>calendar_today</mat-icon></button>
     <button mat-button class="filter-button"><a routerLink="/filtres">Filtres</a></button>
+    <button mat-icon-button *ngIf="asso" routerLink="/event-editor"><mat-icon>add</mat-icon></button>
     <span class="spacer"></span>
 
     <p>{{username}}</p>

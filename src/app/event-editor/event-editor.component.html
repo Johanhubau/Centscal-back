@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>Nouvel événement</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Titre" formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerstart" placeholder="Début" formControlName="start">
+      <mat-datepicker-toggle matSuffix [for]="pickerstart"></mat-datepicker-toggle>
+      <mat-datepicker #pickerstart></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerend" placeholder="Fin" formControlName="end">
+      <mat-datepicker-toggle matSuffix [for]="pickerend"></mat-datepicker-toggle>
+      <mat-datepicker #pickerend></mat-datepicker>
+    </mat-form-field>
+  </form>
+  <button mat-button>Confirmer</button>
+</mat-card>

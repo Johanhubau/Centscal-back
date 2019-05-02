@@ -11,12 +11,9 @@ __pycache__/
 ##################
 davical
 
-# For local dev of angular on diff systems #
-############################################
-node_modules/.bin/node-sass
-node_modules/node-sass/bin/node-sass
-node_modules/opn/xdg-open
-node_modules/node-sass/vendor/linux-x64-57/
+# Shouldn't be versioned #
+##########################
+node_modules/
 
 # Remove Frigg logs from git #
 ##############################

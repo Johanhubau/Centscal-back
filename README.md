@@ -5,10 +5,6 @@ Centscal is a web-app that displays and manages a calendar for associations and 
 This project is done entirely by students for the PRO3600 class at Télécom-SudParis.
 
 The project was generated with Angular-CLI
-## Installation
-
-Before you're able to run this project, we expect you ta have installed a DAViCal server on your machine. Please navigate to `https://www.davical.org/installation.php` if you need any help doing so.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

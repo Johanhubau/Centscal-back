@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-
+import { Event } from '../event';
+import * as moment from 'moment';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-event-editor',
@@ -8,10 +9,10 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./event-editor.component.css']
 })
 export class EventEditorComponent {
-  eventForm = new FormGroup({
-    id: new FormControl(),
-    start: new FormControl(),
-    end: new FormControl(),
-    title: new FormControl()
-    });
+
+onSubmit(form: NgForm) {
+  console.log(form.value);
 }
+}
+
+

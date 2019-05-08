@@ -10,6 +10,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule, MatInputModule } from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -19,13 +20,13 @@ import {MatNativeDateModule, MatInputModule } from '@angular/material';
     MatCardModule, MatSidenavModule,
     MatDialogModule, MatListModule,
     MatFormFieldModule, MatNativeDateModule,
-    MatInputModule],
+    MatInputModule, MatSelectModule],
   exports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
     MatDialogModule, MatListModule,
     MatFormFieldModule, MatNativeDateModule,
-    MatInputModule],
+    MatInputModule, MatSelectModule],
 })
 export class MaterialModule { }

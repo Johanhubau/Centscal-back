@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-calendar',
@@ -8,9 +9,11 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class CalendarComponent implements OnInit {
   calendarPlugins = [dayGridPlugin];
-  constructor() { }
+  events = [];
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    this.events = this.eventService.events;
   }
 
 }

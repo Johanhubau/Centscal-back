@@ -10,6 +10,8 @@ import { FiltersComponent } from './filters/filters.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { EventEditorComponent } from './event-editor/event-editor.component';
 import { AmazingTimePickerModule } from './atp-library/atp-time-picker.module';
+import { EventService } from './event.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { AmazingTimePickerModule } from './atp-library/atp-time-picker.module';
     ReactiveFormsModule,
     AmazingTimePickerModule
   ],
-  providers: [],
+  providers: [
+    EventService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

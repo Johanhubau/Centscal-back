@@ -1,5 +1,5 @@
-import {Injectable, Output} from '@angular/core';
-
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -7,19 +7,20 @@ import {Injectable, Output} from '@angular/core';
 })
 export class EventService {
   events = [];
-  constructor() { }
+  constructor(private http: HttpClient) { }
   addEvent(title: string, place: string, start: string, end: string) {
     const eventObject = {
       title: '',
-      place: '',
+      description: '',
       start: '',
       end: ''
     };
     eventObject.title = title;
-    eventObject.place = place;
+    eventObject.description = place;
     eventObject.start = start;
     eventObject.end =  end;
     this.events.push(eventObject);
+    this.http.post<any>(`${JSON.stringify(URL)}/api/events`, eventObject);
   }
 }
 

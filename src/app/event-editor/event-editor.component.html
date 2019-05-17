@@ -1,9 +1,10 @@
-<mat-card>
+<mat-card class="card-center">
   <mat-card-title>Nouvel événement</mat-card-title>
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <mat-form-field>
       <input matInput placeholder="Titre" id="title" name="title" ngModel required>
     </mat-form-field>
+  <br>
     <mat-form-field>
       <input matInput [matDatepicker]="pickerstart" placeholder="Début" id="startDate" name="startDate" ngModel required>
       <mat-datepicker-toggle matSuffix [for]="pickerstart"></mat-datepicker-toggle>
@@ -12,6 +13,7 @@
     <label>
       <input atp-time-picker placeholder="Début" id="startHour" name="startHour" ngModel required/>
     </label>
+    <br>
     <mat-form-field>
       <input matInput [matDatepicker]="pickerend" placeholder="Fin" id="endDate" name="endDate" ngModel required>
       <mat-datepicker-toggle matSuffix [for]="pickerend"></mat-datepicker-toggle>
@@ -20,9 +22,11 @@
     <label>
       <input atp-time-picker placeholder="Fin" id="endHour" name="endHour" ngModel required/>
     </label>
+    <br>
     <mat-form-field>
       <input matInput placeholder="Lieu" id="place" name="place" ngModel required>
     </mat-form-field>
+    <br>
     <button mat-button type="submit">Enregistrer</button>
   </form>
 

@@ -11,7 +11,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule, MatInputModule } from '@angular/material';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   imports: [MatButtonModule, MatCheckboxModule,
@@ -20,13 +20,15 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule, MatSidenavModule,
     MatDialogModule, MatListModule,
     MatFormFieldModule, MatNativeDateModule,
-    MatInputModule, MatSelectModule],
+    MatInputModule, MatSelectModule,
+    MatTooltipModule],
   exports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
     MatCardModule, MatSidenavModule,
     MatDialogModule, MatListModule,
     MatFormFieldModule, MatNativeDateModule,
-    MatInputModule, MatSelectModule],
+    MatInputModule, MatSelectModule,
+    MatTooltipModule],
 })
 export class MaterialModule { }

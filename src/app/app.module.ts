@@ -11,13 +11,17 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { EventEditorComponent } from './event-editor/event-editor.component';
 import { AmazingTimePickerModule } from './atp-library/atp-time-picker.module';
 import { EventService } from './event.service';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationService} from './authentication.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiltersComponent,
     CalendarComponent,
-    EventEditorComponent
+    EventEditorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,10 +31,12 @@ import { EventService } from './event.service';
     FullCalendarModule,
     FormsModule,
     ReactiveFormsModule,
-    AmazingTimePickerModule
+    AmazingTimePickerModule,
+    HttpClientModule
   ],
   providers: [
-    EventService
+    EventService,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

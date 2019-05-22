@@ -3,6 +3,8 @@
                  [plugins]="calendarPlugins"
                  [firstDay]="1"
                  [events]="events"
-                 [locale]="locale">
+                 [locale]="locale"
+                 (eventClick)="eventClick($event)">
   </full-calendar>
 </mat-card>
+

@@ -11,15 +11,15 @@ import {Router} from '@angular/router';
 })
 export class AppComponent implements OnInit{
   constructor(private appGlobal: AppGlobal, private authService: AuthenticationService, private router: Router) {}
-  isAsso: boolean;
+  isLoggedIn: any;
 
 
   ngOnInit(): void {
-    this.isAsso = this.appGlobal.isLoggedIn;
+    this.isLoggedIn = this.authService.currentUserValue;
   }
 
   logout() {
-    return this.authService.logout();
     this.router.navigate(['']);
+    return this.authService.logout();
   }
 }

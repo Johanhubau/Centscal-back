@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import { EventService } from '../event.service';
+import { EventService } from '../services/event.service';
 import frLocale from '@fullcalendar/core/locales/fr';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
+import {EventDisplayComponent} from '../event-display/event-display.component';
+import { map } from 'rxjs/operators';
+import {EventCal} from '../event';
+
+
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
@@ -9,23 +15,17 @@ import frLocale from '@fullcalendar/core/locales/fr';
 })
 export class CalendarComponent implements OnInit {
   calendarPlugins = [dayGridPlugin];
-  events = [ ];
+  events = 'http://127.0.0.1:8000/api/events?start=${this.appGlobal.startD}&end=${this.appGlobal.endD}';
   locale = frLocale;
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private bottomSheet: MatBottomSheet) { }
 
   ngOnInit() {
-    this.events.push(
-      {
-        title: 'Long Event',
-        description: 'description for Long Event',
-        start: '2019-05-12',
-        end: '2019-05-16'
-      });
-    console.log(this.events);
-    this.events = this.eventService.events;
   }
 
-
+eventClick() {
+  this.bottomSheet.open(EventDisplayComponent);
   }
+}
+
 
 

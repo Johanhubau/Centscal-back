@@ -3,21 +3,20 @@
     <input type="image" class="logo" src='../assets/logo.png' alt="Centscal">
     <button mat-icon-button routerLink="/calendar"><mat-icon>calendar_today</mat-icon></button>
     <button mat-button class="filter-button"><a routerLink="/filtres">Filtres</a></button>
-    <button mat-icon-button *ngIf="asso" routerLink="/event-editor"><mat-icon>add</mat-icon></button>
+    <button mat-icon-button routerLink="/event-editor" ><mat-icon>add</mat-icon></button>
     <span class="spacer"></span>
-
-
     <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>perm_identity</mat-icon>
+      <mat-icon>perm_identity</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/login">
+        <span>Se connecter</span>
       </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <span>Afficher profil</span>
-        </button>
-        <button mat-menu-item>
-          <span>Déconnexion</span>
-        </button>
-      </mat-menu>
+      <button mat-menu-item (click)="logout()" >
+        <span>Déconnexion</span>
+      </button>
+    </mat-menu>
+
   </mat-toolbar-row>
 </mat-toolbar>
 

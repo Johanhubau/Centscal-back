@@ -12,6 +12,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule, MatInputModule } from '@angular/material';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   imports: [MatButtonModule, MatCheckboxModule,
@@ -21,7 +22,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatDialogModule, MatListModule,
     MatFormFieldModule, MatNativeDateModule,
     MatInputModule, MatSelectModule,
-    MatTooltipModule],
+    MatTooltipModule, MatBottomSheetModule],
   exports: [MatButtonModule, MatCheckboxModule,
     MatToolbarModule, MatIconModule,
     MatMenuModule, MatDatepickerModule,
@@ -29,6 +30,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatDialogModule, MatListModule,
     MatFormFieldModule, MatNativeDateModule,
     MatInputModule, MatSelectModule,
-    MatTooltipModule],
+    MatTooltipModule, MatBottomSheetModule],
 })
 export class MaterialModule { }

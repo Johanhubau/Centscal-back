@@ -10,10 +10,11 @@ import { FiltersComponent } from './filters/filters.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { EventEditorComponent } from './event-editor/event-editor.component';
 import { AmazingTimePickerModule } from './atp-library/atp-time-picker.module';
-import { EventService } from './event.service';
+import { EventService } from './services/event.service';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthenticationService} from './authentication.service';
+import { AuthenticationService} from './services/authentication.service';
+import { EventDisplayComponent } from './event-display/event-display.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AuthenticationService} from './authentication.service';
     FiltersComponent,
     CalendarComponent,
     EventEditorComponent,
-    LoginComponent
+    LoginComponent,
+    EventDisplayComponent
   ],
   imports: [
     BrowserModule,

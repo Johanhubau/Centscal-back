@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'filtres', component: FiltersComponent },
   { path: 'calendar', component: CalendarComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'event-editor', component: EventEditorComponent,  canActivate: [AuthGuard]  },
+  { path: 'event-editor', component: EventEditorComponent , canActivate: [AuthGuard]},
   { path: '', redirectTo: '/calendar',  pathMatch: 'full'}
 ];
 

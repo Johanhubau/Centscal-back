@@ -12,9 +12,12 @@ import { EventEditorComponent } from './event-editor/event-editor.component';
 import { AmazingTimePickerModule } from './atp-library/atp-time-picker.module';
 import { EventService } from './services/event.service';
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AuthenticationService} from './services/authentication.service';
 import { EventDisplayComponent } from './event-display/event-display.component';
+import { AuthGuard } from './auth.guard';
+import {AuthTokenInterceptor} from './auth.token.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { EventDisplayComponent } from './event-display/event-display.component';
   ],
   providers: [
     EventService,
-    AuthenticationService
+    AuthenticationService,
+    AuthGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { AuthenticationService } from './services/authentication.service';
 import { AppGlobal } from './app.global';
 import {Router} from '@angular/router';
+import {User} from './user';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,10 @@ import {Router} from '@angular/router';
   providers: [AuthenticationService, AppGlobal]
 })
 export class AppComponent implements OnInit{
-  constructor(private appGlobal: AppGlobal, private authService: AuthenticationService, private router: Router) {}
+  currentUser: User;
+  constructor(private appGlobal: AppGlobal, private authService: AuthenticationService, private router: Router) {
+    this.authService.currentUser.subscribe(x => this.currentUser = x);
+  }
   isLoggedIn: any;
 
 

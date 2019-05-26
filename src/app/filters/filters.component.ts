@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FilterService} from '../services/filter.service';
 
 @Component({
   selector: 'app-filters',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
-  CalendarList: string[] = ['Asso 1', 'Asso 2', 'Asso 3', 'Asso 4', 'Asso 5'];
-  constructor() { }
+  assoList: string[];
+  list: any;
+  constructor(private filterService: FilterService) { }
 
   ngOnInit() {
+    this.list = this.filterService.getAsso();
+    this.assoList = this.list.name;
   }
 
 }

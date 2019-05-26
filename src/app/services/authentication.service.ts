@@ -26,11 +26,8 @@ export class AuthenticationService {
 
   login(email: string, password: string) {
       return this.http.post<any>(`${this.globalVar.baseAPIUrl}api/login`, {email, password})
-        .pipe(map(user => {
-          if (user && user.token) {
-            localStorage.setItem('currentUser', JSON.stringify(user));
-          }
-          return user;
+        .pipe(map(res => {
+            localStorage.setItem('currentUser', JSON.stringify(res.success));
         }));
   }
 }

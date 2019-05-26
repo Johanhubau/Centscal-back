@@ -19,8 +19,7 @@ export class CalendarComponent implements OnInit {
   locale = frLocale;
   constructor(private eventService: EventService, private bottomSheet: MatBottomSheet) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 eventClick() {
   this.bottomSheet.open(EventDisplayComponent);

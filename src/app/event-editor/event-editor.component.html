@@ -4,6 +4,11 @@
     <mat-form-field>
       <input matInput placeholder="Titre" id="title" name="title" ngModel required>
     </mat-form-field>
+    <br>
+
+    <mat-select id="selectedValue" placeholder="Association" [(ngModel)]="selectedValue" name="selectedValue">
+      <mat-option *ngFor="let asso of AssoList" [value]="asso.value">{{asso.name}}</mat-option>
+    </mat-select>
   <br>
     <mat-form-field>
       <input autocomplete="off" matInput [matDatepicker]="pickerstart" placeholder="Début" id="startDate" name="startDate" ngModel required>
@@ -25,5 +30,4 @@
     <br>
     <button mat-button type="submit">Enregistrer</button>
   </form>
-
 </mat-card>

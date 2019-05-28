@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FilterService} from '../services/filter.service';
+import {Asso} from '../asso';
+
 
 @Component({
   selector: 'app-filters',
@@ -7,15 +9,21 @@ import {FilterService} from '../services/filter.service';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
-  assoList: string[];
-  list: any;
-  constructor(private filterService: FilterService) { }
+  AssoList = [ {value: 1, name: 'BDE'}, {value: 2, name: 'BDA'}];
 
-  ngOnInit() {
-    this.list = this.filterService.getAsso();
-    this.assoList = this.list.name;
+
+  constructor(private filterService: FilterService) {
   }
 
+  ngOnInit() {
+  }
+
+  showAssoList(list: string[]) {
+    // @ts-ignore
+    this.filterService.getAsso();
+    // .map(({name}) => name)}
+  }
 }
+
 
 

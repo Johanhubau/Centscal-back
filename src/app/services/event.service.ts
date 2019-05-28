@@ -12,17 +12,18 @@ import {Observable} from 'rxjs';
 })
 export class EventService {
   events = [ ];
-  private options = { headers: new HttpHeaders().set('Content-Type', 'application/-www-form-urlencoder') };
+  private options = { headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoder') };
   constructor(private http: HttpClient, private appGlobal: AppGlobal) { }
   static extractData(res: Response) {
     const body = res.json();
     return body || {};
   }
 
-  addEvent(title: string, allDay: boolean, start: string, end: string) {
+  addEvent(title: string, allDay: boolean, asso_id: number, start: string, end: string) {
     const eventObject = {
       title: '',
       allDay: false,
+      asso_id,
       start: '',
       source: 'null',
       end: ''
@@ -31,7 +32,7 @@ export class EventService {
     eventObject.start = start;
     eventObject.end =  end;
     console.log(eventObject);
-    return this.http.post(`${this.appGlobal.baseAPIUrl}api/events`, JSON.stringify(eventObject), this.options)
+    return this.http.post(`${this.appGlobal.baseAPIUrl}api/events`, {eventObject}, this.options)
       .subscribe(EventService.extractData);
   }
 
